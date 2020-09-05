@@ -1,0 +1,31 @@
+### 2.856 GHz Cavity
+### squared shape cavity with a bore tube
+### created by K.Nishida (2020/08)
+
+
+&reg kprob=1,            ! superfish problem
+icylin=1,                ! cylindrical geometry
+freq=2856.0,                ! RF Frequency
+dx=1.0,                  ! mesh interval
+xdri=0.0,ydri=41.13,       ! Drive point of RF
+kmethod=1,               ! Use beta to compute wave number
+beta=0.999 &               ! Particle velocity for transit-time integrals
+
+
+$po x=0.0, y=0.0 $
+$po x=0.0, y=41.13 $
+$po x=14.9775, y=41.13 $
+$po x=14.9775, y=13.5 $
+$po x=19.9775, y=13.5 $
+$po x=19.9775, y=41.13 $
+$po x=49.9325, y=41.13 $
+$po x=49.9325, y=13.5 $
+$po x=54.9325, y=13.5 $
+$po x=54.9325, y=41.13 $
+$po x=84.88749999999999, y=41.13 $
+$po x=84.88749999999999, y=13.5 $
+$po x=89.88749999999999, y=13.5 $
+$po x=89.88749999999999, y=41.13 $
+$po x=104.865, y=41.13 $
+$po x=104.865, y=0.0 $
+$po x=0.0, y=0.0 $
