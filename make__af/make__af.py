@@ -17,6 +17,7 @@ def make__af():
     t = 5.0
     r = 2.5
     f = 2.856
+    delta = 1.0
     
     outFile = "basicCavity.af"
     
@@ -37,11 +38,12 @@ def make__af():
     settings = \
         "&reg kprob=1,    ! superfish problem\n"\
         "icylin=1,        ! cylindrical geometry\n"\
-        "freq=2856.0,     ! RF Frequency\n"\
+        "freq={0},        ! RF Frequency\n"\
+        "dx={1},          ! mesh interval\n"\
         "xdri=0,ydri=5,   ! Drive point of RF\n"\
         "kmethod=1,       ! Use beta to compute wave number\n"\
         "beta=0.95 &      ! Particle velocity for transit-time integrals\n"\
-        "\n\n"
+        "\n\n".format( f, delta )
 
 
     # ------------------------------------------------- #
