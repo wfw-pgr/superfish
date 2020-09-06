@@ -3,13 +3,14 @@
 ### created by K.Nishida (2020/08)
 
 
-&reg kprob=1,    ! superfish problem
-icylin=1,        ! cylindrical geometry
-freq=2.856,        ! RF Frequency
-dx=1.0,          ! mesh interval
-xdri=0,ydri=5,   ! Drive point of RF
-kmethod=1,       ! Use beta to compute wave number
-beta=0.95 &      ! Particle velocity for transit-time integrals
+&reg kprob=1,            ! superfish problem
+icylin=1,                ! cylindrical geometry
+conv=0.1,                ! univ conversion ( cm => mm )
+freq=2856.0,                ! RF Frequency
+dx=1.0,                  ! mesh interval
+xdri=0.0,ydri=41.13,       ! Drive point of RF
+kmethod=1,               ! Use beta to compute wave number
+beta=0.999 &               ! Particle velocity for transit-time integrals
 
 
 $po x=0.0, y=0.0 $

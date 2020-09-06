@@ -32,13 +32,14 @@ def make__af():
     settings = \
         "&reg kprob=1,            ! superfish problem\n"\
         "icylin=1,                ! cylindrical geometry\n"\
-        "freq={0},                ! RF Frequency\n"\
-        "dx={1},                  ! mesh interval\n"\
-        "xdri={2},ydri={3},       ! Drive point of RF\n"\
+        "conv={0},                ! univ conversion ( cm => mm )\n"\
+        "freq={1},                ! RF Frequency\n"\
+        "dx={2},                  ! mesh interval\n"\
+        "xdri={3},ydri={4},       ! Drive point of RF\n"\
         "kmethod=1,               ! Use beta to compute wave number\n"\
-        "beta={4} &               ! Particle velocity for transit-time integrals\n"\
-        "\n\n".format( const["frequency"]*1000.0, const["delta"], \
-                       const["xy_drive"][0], const["xy_drive"][1], const["beta"] )
+        "beta={5} &               ! Particle velocity for transit-time integrals\n"\
+        "\n\n".format( const["unit_conversion"], const["frequency"]*1000.0, const["delta"], \
+                       const["xy_drive"][0]    , const["xy_drive"][1]     , const["beta"] )
 
 
     # ------------------------------------------------- #
