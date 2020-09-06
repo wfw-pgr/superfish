@@ -49,25 +49,26 @@ def make__af():
     d        = const["cell_length"]
     a        = const["aperture_radius"]
     t        = const["aperture_length"]
+    hd       = const["cell_length"]     * 0.5
     ht       = const["aperture_length"] * 0.5
-    
-    pts      = [ [              0.0,    0.0 ],
-                 [              0.0,      b ],
-                 [         0.5*d-ht,      b ],
-                 [         0.5*d-ht,   a+ht ],
-                 [         0.5*d+ht,   a+ht ],
-                 [         0.5*d+ht,      b ],
-                 [     d + 0.5*d-ht,      b ],
-                 [     d + 0.5*d-ht,   a+ht ],
-                 [     d + 0.5*d+ht,   a+ht ],
-                 [     d + 0.5*d+ht,      b ],
-                 [ 2.0*d + 0.5*d-ht,      b ],
-                 [ 2.0*d + 0.5*d-ht,   a+ht ],
-                 [ 2.0*d + 0.5*d+ht,   a+ht ],
-                 [ 2.0*d + 0.5*d+ht,      b ],
-                 [ 3.0*d           ,      b ],
-                 [ 3.0*d           ,    0.0 ],
-                 [              0.0,    0.0 ]
+
+    pts      = [ [           0.0,    0.0 ],
+                 [           0.0,      b ],
+                 [         hd-ht,      b ],
+                 [         hd-ht,   a+ht ],
+                 [         hd+ht,   a+ht ],
+                 [         hd+ht,      b ],
+                 [     d + hd-ht,      b ],
+                 [     d + hd-ht,   a+ht ],
+                 [     d + hd+ht,   a+ht ],
+                 [     d + hd+ht,      b ],
+                 [ 2.0*d + hd-ht,      b ],
+                 [ 2.0*d + hd-ht,   a+ht ],
+                 [ 2.0*d + hd+ht,   a+ht ],
+                 [ 2.0*d + hd+ht,      b ],
+                 [ 3.0*d        ,      b ],
+                 [ 3.0*d        ,    0.0 ],
+                 [           0.0,    0.0 ]
     ]
     pts      = np.array( pts )
     
